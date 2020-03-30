@@ -24,6 +24,7 @@ app.get('/customers/edit/:id', customers.edit);
 app.post('/customers/edit/:id', customers.update);
 
 
-app.listen('9000','0.0.0.0',()=>{
-      console.log("server is listening on 9000 port");
-})
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}...`);
+});
